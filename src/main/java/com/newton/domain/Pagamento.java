@@ -12,11 +12,13 @@ import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.newton.domain.enums.EstadoPagamento;
 
 //uma classe abstract não pode ser instanciada, deve-se instanciar uma de suas subclasses
 @Entity
 @Inheritance(strategy=InheritanceType.JOINED)
+@JsonTypeInfo(use=JsonTypeInfo.Id.NAME, include=JsonTypeInfo.As.PROPERTY, property="@type")
 public abstract class Pagamento implements Serializable {
 	private static final long serialVersionUID = 1L;
 	//O id de pagamento não precisa da annotation @GeneratedValue, pois o seu ID vai ser o
