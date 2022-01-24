@@ -31,7 +31,7 @@ public class Produto implements Serializable {
 	@ManyToMany
 	@JoinTable(
 		name="PRODUTO_CATEGORIA",
-		joinColumns=@JoinColumn(name="pdoduto_id"),
+		joinColumns=@JoinColumn(name="produto_id"),
 		inverseJoinColumns=@JoinColumn(name="categoria_id")
 	)
 	private List<Categoria> categorias = new ArrayList<>();
