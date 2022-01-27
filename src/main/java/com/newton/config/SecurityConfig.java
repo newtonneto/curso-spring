@@ -28,6 +28,11 @@ import com.newton.security.JWTUtil;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	private static final String[] PUBLIC_MATCHERS = {
+		"/swagger-resources/**",
+		"/swagger-ui.html**",
+		"/swagger-ui/**",
+		"/v2/api-docs",
+        "/webjars/**",
 		"/h2-console/**"
 	};
 	
