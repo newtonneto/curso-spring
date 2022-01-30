@@ -1,4 +1,4 @@
-#CURSO SPRING
+# CURSO SPRING
 
 ## Instruções para iniciar o banco de dados com docker
 
@@ -49,5 +49,7 @@
 
 Na raiz do projeto se encontra dois arquivos .sql, um para o PostgreSQL e outro para o MySQL, os mesmos devem ser importados para o respectivo banco de escolha do usuário. Por padrão o projeto está configurado para utilizar o PostgreSQL, caso deseje utilizar o MySQL, a configuração do application-dev.properties deve ser alterada.
 
+## Amazon S3
 
+  É necessário incluir no arquivo application.properties a chave de acesso e a chave de acesso secreta para rodar o projeto
 
