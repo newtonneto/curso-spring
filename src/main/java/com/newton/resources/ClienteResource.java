@@ -4,6 +4,7 @@ import java.net.URI;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,11 +23,17 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.newton.domain.Cliente;
 import com.newton.dto.ClienteDTO;
 import com.newton.dto.ClienteNewDTO;
+import com.newton.security.JWTUtil;
+import com.newton.security.UserSS;
 import com.newton.services.ClienteService;
+import com.newton.services.UserService;
 
 @RestController
 @RequestMapping(value="/clientes")
 public class ClienteResource {
+	@Autowired
+	private JWTUtil jwtUtil;
+	
 	@Autowired
 	private ClienteService service;
 	
